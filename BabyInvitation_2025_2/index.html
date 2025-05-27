@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sowon's First Birthday</title>
+    <link rel="stylesheet" href="style2.css"/>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="/main.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  
+</head>
+
+<body>
+    <div class="invite_wrap" id="fall">
+        <div class ="sec01 wrap">
+            <img src="img/IMG_9535.JPG" alt="아기사진" class="mainimg"/>
+            <img src="img/main.png" alt="Sowon's First Birthday" class="titleimg">
+
+        </div>
+
+        <div class ="sec02">
+            <div class="invitation-text">
+                <p>벌써 일년이라는 시간이 흘러 많은 분들의 사랑으로<br>
+                소원이가 건강한 아이로 자랐습니다.</p>
+            
+                <p>기쁘고 행복한 이날,<br>
+                소원이가 받은 사랑보다 더 많이 베풀 줄 아는 아이로<br>
+                자라날 수 있도록 함께 축하해 주시기 바랍니다.</p>
+            </div>
+        </div>
+        
+        <div class ="sec03">
+            <img src="img/date.png" alt="invitation" class="dateimg">
+            <div id="kCalendar"></div>
+        </div>
+        <div class ="sec04" ;>
+            <div class="invitation-text">
+                <p class="date">2025년 7월 13일 일요일 오전 11시</p>
+                <p class="place">
+                    경기 남양주시 다산지금로 202 한강DIMC테라타워 B1층<br>
+                    다이닝몽드 다산점
+                </p>
+                </div>
+            <div id="daumRoughmapContainer1747364216134" class="root_daum_roughmap root_daum_roughmap_landing"></div>
+            <script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+            <script charset="UTF-8">
+                new daum.roughmap.Lander({
+                    "timestamp" : "1747364216134",
+                    "key" : "2o2ph",
+                    "mapWidth" : "640",
+                    "mapHeight" : "360"
+                }).render();
+            </script>
+
+        </div>
+
+        <div class="imgsec">
+            <img src="img/album.png" alt="invitation" class="albumimg">
+
+        </div>
+        <div class ="sec05">
+
+            <div class="swiper mySwiper">
+                <!-- 네비게이션 -->
+                
+                <div id = "page_number">1/3</div>
+                <div class="swiper-wrapper">
+                    
+                  <div class="swiper-slide"><img src="img/IMG_3279.jpeg" alt="앨범1"></div>
+                  <div class="swiper-slide"><img src="img/IMG_3268.jpeg" alt="앨범2"></div>
+                  <div class="swiper-slide"><img src="img/IMG_3877.jpeg" alt="앨범3"></div>
+                  <!-- ... 총 13장 -->
+                </div>
+
+              <!--  <script language = "javascript">
+                    function SetPageNumber(nPageNumber)
+                    {
+                    document.getElementById("page_number").innerHTML = nPageNumber;
+                    }
+
+                   
+                   </script>-->
+              </div>
+
+    
+        </div>
+
+
+
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      const swiper = new Swiper('.mySwiper', {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        centeredSlides: true,
+        loop: true,
+        renderBullet: function (index, className) {
+        return '<span class="' + className + '">' + (index + 1) + '</span>';
+        },
+        on: {
+            init: function() {
+        updatePageNumber(this);
+      },
+      slideChangeTransitionEnd: function() {
+        updatePageNumber(this);
+        },
+        }
+     
+      });
+      function updatePageNumber(swiper) {
+                    // realIndex는 0부터 시작하므로 +1
+                    const current = swiper.realIndex + 1;
+                    // loop모드여도 실제 슬라이드 개수는 swiper.slides.length - 복제본 개수인데,
+                    // pagination bullets 수로 실제 슬라이드 수를 구할 수 있음
+                    const total = swiper.pagination.bullets.length;
+                    document.getElementById('page_number').textContent = `${current} / 3`;
+                }
+    
+    </script>
+    
+</body>
+</html>
+
