@@ -8,7 +8,10 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script type="text/javascript" src="main.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-
+    <meta property="og:title" content="소원이의 첫 생일에 초대합니다 🎉" />
+    <meta property="og:description" content="사랑스러운 소원이의 돌잔치에 초대드려요. 날짜와 장소를 확인해주세요!" />
+    <meta property="og:url" content="https://gyojin3770.github.io/baby-invite/" />
+    <meta property="og:type" content="website" />
   
 </head>
 
@@ -39,7 +42,6 @@
             <div class="invitation-text">
                 <p class="date">2025년 7월 13일 일요일 오전 11시</p>
                 <p class="place">
-                    경기 남양주시 다산지금로 202 한강DIMC테라타워 B1층<br>
                     다이닝몽드 다산점
                 </p>
                 </div>
@@ -94,9 +96,15 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
       const swiper = new Swiper('.mySwiper', {
+        direction: 'horizontal',
         slidesPerView: 1,
         spaceBetween: 10,
         centeredSlides: true,
+        grabCursor: true,
+        pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
         loop: true,
         renderBullet: function (index, className) {
         return '<span class="' + className + '">' + (index + 1) + '</span>';
