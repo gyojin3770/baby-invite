@@ -17,6 +17,7 @@
 </head>
 
 <body>
+  <!--
   <div id="introScreen" class="fixed inset-0 bg-white flex items-center justify-center z-50 transition-opacity duration-1000">
     <div class="text-center">
       <h1 class="text-3xl font-bold text-pink-600">🎉 초대합니다!</h1>
@@ -24,6 +25,13 @@
     </div>
   </div>
   <div id="mainContent" class="opacity-0 transition-opacity duration-1000">
+   --> <audio id="bgm" loop>
+      <source src="배경음악파일주소.mp3" type="audio/mpeg" />
+      브라우저가 오디오를 지원하지 않습니다.
+    </audio>
+    
+    <button id="musicToggle"></button></button>
+
     <div class="invite_wrap " id="fall">
         <div class ="sec01 wrap">
             <img src="img/IMG_9535.JPG" alt="아기사진" class="mainimg"/>
@@ -151,7 +159,7 @@
          </div>
 
       </div>
-
+      <!--
     <script>
       window.addEventListener("DOMContentLoaded", () => {
         setTimeout(() => {
@@ -165,7 +173,7 @@
           main.classList.remove("opacity-0");
         }, 2500); // 2.5초 후 인트로 제거
       });
-    </script>
+    </script>-->
 
     </div>
   </div>
